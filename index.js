@@ -19,6 +19,17 @@ toolbar.addEventListener('click', i => {
     }
 });
 
+toolbar.addEventListener('change', e => {
+    if(e.target.id === 'stroke') {
+        ctx.strokeStyle = e.target.value;
+    }
+
+    if(e.target.id === 'lineWidth') {
+        lineWidth = e.target.value;
+    }
+    
+});
+
 toolbar.addEventListener('change', i => {
     if(i.target.id === 'lineWidth') {
         lineWidth = i.target.value;
